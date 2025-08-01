@@ -3,9 +3,6 @@
 require('commander')
   .version(require('../package').version)
   .usage('<command> [options]')
-  .command('init', 'generate a new project from a template')
-  .command('list', 'list available templates')
   .command('doctor', 'help to diagnosis the problems')
-  .command('package-lock', 'package-lock')
-  .command('summerize', 'summerize')
+  .command('serverless', 'package the serverless.zip')
   .parse(process.argv);

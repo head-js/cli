@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var chalk = require('chalk');
+var serverless = require('../serverless/index.js');
+
+/**
+ * Usage.
+ */
+
+program
+  // .usage('[options]')
+  .option('--package <type>', 'Package the serverless.zip of <T>')
+  .action(function (options) {
+    serverless(options);
+  })
+  .parse(process.argv);
+
+
+/**
+ * Padding.
+ */
+
+console.log()
+process.on('exit', function () {
+  console.log()
+})
